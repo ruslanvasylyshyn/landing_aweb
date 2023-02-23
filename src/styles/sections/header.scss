@@ -1,0 +1,113 @@
+@forward '../utils/vars.scss';
+
+.header {
+  background-color: $c-primary;
+  width: 100%;
+  height: 104px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  color: $c-white;
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &_logo-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    & > img {
+      width: 179px;
+      margin-right: 22px;
+      margin-top: -15px;
+    }
+
+    & > p {
+      width: 150px;
+      font-size: $header-font-size;
+      line-height: $header-line-height;
+    }
+  }
+
+  &_phone-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    & > a {
+      font-size: 30px;
+      line-height: 34px;
+      color: inherit;
+      margin-right: 8px;
+      text-decoration: none;
+    }
+
+    & > p {
+      font-size: $header-font-size;
+      line-height: $header-line-height;
+      border-bottom: 1px dashed rgb(255, 255, 255, 0.25);
+    }
+  }
+
+  &_social-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    & > a {
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      &:first-child {
+        display: none;
+
+        & img {
+          border-radius: 50%;
+        }
+      }
+
+      & > img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header_phone-wrapper > p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header_logo-wrapper > p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    &_phone-wrapper {
+      display: none;
+    }
+
+    &_social-wrapper a:first-child {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header_logo-wrapper > img {
+    width: 130px;
+  }
+}

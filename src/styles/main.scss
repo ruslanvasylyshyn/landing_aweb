@@ -1,0 +1,21 @@
+@import 'utils';
+@import 'fonts';
+@import 'typography';
+@import 'reset';
+@import './sections/header.scss';
+
+html {
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $c-white;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+  transition: width $transition-time;
+}
