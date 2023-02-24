@@ -21,7 +21,7 @@
     align-items: center;
     height: 100%;
 
-    & > img {
+    & img {
       width: 179px;
       margin-right: 22px;
       margin-top: -15px;
@@ -45,6 +45,12 @@
       color: inherit;
       margin-right: 8px;
       text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: $transition-time;
+
+      &:hover {
+        border-bottom: 1px solid $c-white;
+      }
     }
 
     & > p {
@@ -77,6 +83,12 @@
       & > img {
         width: 32px;
         height: 32px;
+        transform: scale(1);
+        transition: $transition-time;
+
+        &:hover {
+          transform: scale(1.3);
+        }
       }
     }
   }
@@ -107,7 +119,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .header_logo-wrapper > img {
+  .header_logo-wrapper img {
     width: 130px;
   }
 }

@@ -1,15 +1,13 @@
 @import 'utils';
-@import 'fonts';
-@import 'typography';
 @import 'reset';
 @import './sections/header.scss';
 @import './sections/hero_section.scss';
 @import './sections/third_section.scss';
 @import './sections/fourth_section.scss';
 @import './sections/fifth_section.scss';
+@import './sections/footer.scss';
 
 html {
-  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
 

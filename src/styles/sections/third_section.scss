@@ -10,15 +10,27 @@
     column-gap: 40px;
   }
 
+  & a {
+    text-decoration: none;
+  }
+
   &-card {
     max-width: 500px;
     height: auto;
     border-radius: 6px;
     margin-bottom: 24px;
+    overflow-x: hidden;
 
     & > img {
       max-width: 480px;
       width: 100%;
+      transform: scale(1);
+      transition: $transition-time;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.4);
+      }
     }
   }
 

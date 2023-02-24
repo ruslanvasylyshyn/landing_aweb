@@ -1,0 +1,46 @@
+@forward '../utils/vars.scss';
+
+.footer {
+  margin-top: 24px;
+
+  &_container {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  &_title {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: $c-black;
+
+    & > a {
+      color: #0059ac;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 89, 172, 0.25);
+    }
+  }
+
+  &_social {
+    display: flex;
+
+    & a {
+      text-decoration: none;
+      margin-left: 16px;
+
+      & img {
+        transform: scale(1);
+        transition: $transition-time;
+
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}
