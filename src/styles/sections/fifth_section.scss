@@ -1,0 +1,159 @@
+@forward '../utils/vars.scss';
+
+.fifth_section {
+  margin-top: 64px;
+
+  &-container {
+    display: flex;
+    column-gap: 37px;
+  }
+
+  &-mainContent {
+    flex: 80%;
+    font-style: normal;
+    color: $c-black;
+
+    & > h2 {
+      font-family: 'Trebuchet MS';
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 130%;
+      margin-top: 0;
+      margin-bottom: 32px;
+      hyphens: auto;
+    }
+
+    & > h3,
+    & > h5 {
+      margin-bottom: 8px;
+    }
+
+    & > p,
+    & > ul {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 24px;
+
+      & + .quote {
+        font-style: italic;
+        margin-left: 48px;
+        border-left: 8px solid $c-primary;
+        padding-left: 16px;
+      }
+
+      &:nth-child(2) {
+        font-weight: 700;
+      }
+    }
+
+    & > ul {
+      padding-left: 20px;
+
+      & div {
+        margin-left: -20px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-table {
+    width: 100%;
+    padding: 16px;
+
+    & > div {
+      width: 100%;
+      height: 64px;
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+      color: $c-black;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+
+      &:nth-child(n + 3) {
+        border-top: 2px solid #e0e0e0;
+      }
+
+      & > div {
+        display: flex;
+        flex: 25%;
+      }
+    }
+
+    & > div:first-child {
+      font-weight: 700;
+      background-color: #f7f7f7;
+    }
+  }
+
+  &-asideContent {
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & p:first-child {
+      font-family: 'Trebuchet MS';
+      font-size: 100px;
+      line-height: 116px;
+      letter-spacing: -0.05em;
+      color: $c-grey;
+      margin-bottom: 4px;
+    }
+    & p:nth-child(2) {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 31px;
+      color: $c-black;
+      margin-bottom: 8px;
+    }
+
+    & p:last-child {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      color: $c-grey;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .fifth_section {
+    &-container {
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
+
+    &-asideContent {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .fifth_section {
+    &-mainContent > p + .quote {
+      margin-left: 0;
+    }
+
+    &-table {
+      padding: 0;
+
+      & > div {
+        font-size: 12px;
+      }
+    }
+  }
+}
